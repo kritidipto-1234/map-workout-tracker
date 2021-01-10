@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    color: white;
+    margin:0;
+    display: flex;
+    flex-direction: row;
+}
+
+.list{
+    position: relative;
+    width:45vw;
+    height:100vh;
+    background-color: #2D3439;
+    padding: 38px;
+    width:500px;
+}
+.list img{
+    display: block;
+    margin: auto;
+    width:130px;
+}
+.list .workouts_list
+{
+    max-height: 76vh;
+    overflow: scroll;
+    margin-top: 30px;
+}
+
+.workout{
+ 
+    background-color: #42484D;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    height:100px;
+    padding: 20px;
+    border-left: 6px solid green;
+    cursor: pointer;
+    position: relative;
+}
+.workout .close{
+    position: absolute;
+    right:10px;
+    background: rgb(223, 47, 47);
+    border-radius: 50%;
+    height:30px;
+    width:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:10px;
+}
+.workout .close:hover{
+    background-color: rgb(214, 103, 103);
+}
+.form{
+    margin-top:20px;
+    font-size: 18px;
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; 
+    grid-gap: 9px;
+    line-height: 30px;
+}
+.form>span{
+    display: flex;
+    justify-content: space-between;
+
+}
+.form .input{
+    outline: none;
+    border: none;
+    color: black;
+    border-radius: 3px;
+    width:90px;
+    padding: 5px;
+    height: 25px;
+    background-color: rgb(208, 231, 229);
+}
+.input:focus{
+    background-color: aliceblue;
+}
+.list .copyrights{
+    position:absolute; 
+    bottom: 30px;
+    left:30px;
+    text-align: center;
+    color: grey;
+}
+
+.wrapper{
+    max-height: 76vh;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.mapId
+{
+    flex:auto;
+    width:100px;
+    background-color: aquamarine;
+    height:100vh;
+}
+
+.popup{
+    background-color:#2D3439 ;
+    border: 0;
+    margin: 0;
+    border-radius: 5px;
+    border-left:6px solid green;
+    justify-content: center;
+}
+.popup>div{
+    background-color: transparent;
+}
+.popup>div>div{    
+    background-color:#2D3439 ;
+    color: white;
+}
+.leaflet-popup-tip-container{
+    color: #2D3439;
+    background-color: transparent;
+}

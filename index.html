@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Mapty</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="list">
+        <img src="logo.png" alt="Logo" class="logo">
+        <div class="wrapper">
+            <form class="workout form">
+                <span>Type<select class="input" id="workout_types"><option value="Running">Running</option><option value="Cycling">Cycling</option></select></span> 
+                <span>Distance<input type="text" class="input distance" placeholder="km"></span>
+                <span>Duration <input type="text" class="input duration" placeholder="min"></span>
+                <span><span class="lastlabel">Cadence</span> <input type="text" class="lastinpu input" placeholder="step/min"></span>
+            </form>
+            <div class="workouts_list"></div>
+        </div>
+        <div class="copyrights">© Copyright by Jonas Schmedtmann. Use for learning or your portfolio. Don't use to teach. Don't claim as your own.</div>
+    </div>
+    <div class="mapId" id="mapId"></div>
+</body>
+</html>
