@@ -7,6 +7,8 @@ const lastInput=document.querySelector('.lastinpu');
 const distance=document.querySelector('.distance');
 const duration=document.querySelector('.duration');
 const workoutList=document.querySelector('.workouts_list');
+const showAllBtn=document.querySelector('.showAllBtn');
+
 
 class Workout
 {
@@ -79,6 +81,7 @@ class App
         form.addEventListener('keydown',this.onFormSubmit.bind(this));
         formSelect.addEventListener('change',this.toggleElevationField);
         workoutList.addEventListener('click',this.goToWorkout.bind(this));
+        showAllBtn.addEventListener('click',this.showAllWorkouts.bind(this));
     }
     
     fetchDataFromLocal()
@@ -95,8 +98,8 @@ class App
             maxZoom: 19,
             attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
         };
-        const tiles=L.tileLayer(tileURl,tileObj)
-        tiles.addTo(this.mymap);//OpenStreet tile service is now being used with leaflet map
+        const tiles=L.tileLayer(tileURl,tileObj);
+        this.mymap.addLayer(tiles);//OpenStreet tile service is now being used with leaflet map
         navigator.geolocation.getCurrentPosition(this.setMapToCurrentLocation.bind(this));
     }
 
@@ -162,6 +165,7 @@ class App
     displayWorkouts()//this function displays workouts both on map and list
     {
         this.markers.forEach(m=>this.mymap.removeLayer(m));//remove all markers already there from map
+        this.markers=[];//then remove markers object array too
         workoutList.innerHTML="";//remove all workouts from list
 
         for(let i of this.workouts)
@@ -212,6 +216,12 @@ class App
             return;
         }
         this.mymap.setView([workout.dataset.lat,workout.dataset.lon],13);
+    }
+
+    showAllWorkouts()
+    {
+        const bounds=this.markers.map(e=>{const {lat,lng}=e.getLatLng();return [lat,lng];}); 
+        this.mymap.fitBounds(bounds,{padding: [20, 20]});
     }
 }
 
