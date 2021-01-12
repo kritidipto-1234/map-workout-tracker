@@ -9,6 +9,7 @@ const duration=document.querySelector('.duration');
 const workoutList=document.querySelector('.workouts_list');
 const showAllBtn=document.querySelector('.showAllBtn');
 
+document.style.display="none";
 
 class Workout
 {
