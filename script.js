@@ -105,6 +105,8 @@ class App
     geolocationFail()
     {
         list.style.display="none";
+        if (!navigator.geolocation)
+            alert("No geolocation support");
     }
 
     setMapToCurrentLocation(position)//sets map to given geolocation object
