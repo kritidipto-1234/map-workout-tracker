@@ -1,3 +1,8 @@
+// navigator.geolocation.getCurrentPosition(()=>{},()=>    {
+//     alert("Geolocation supported but failed to get current location");
+// });
+alert("Look i am an alert");
+
 const mapContainer=document.querySelector('.mapId');
 const list=document.querySelector('.list');
 const form=document.querySelector('.form');
@@ -231,4 +236,4 @@ class App
     }
 }
 
-const newapp=new App();
+//const newapp=new App();
