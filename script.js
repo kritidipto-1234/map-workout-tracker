@@ -106,7 +106,7 @@ class App
 
     geolocationFail()
     {
-        list.style.display="none";
+        alert("Geolocation supported but failed to get current location");
     }
 
     setMapToCurrentLocation(position)//sets map to given geolocation object
