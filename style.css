@@ -103,10 +103,12 @@ body{
 }
 .mapId
 {
-    flex:auto;
-    width:100px;
+    width:100%;
     background-color: aquamarine;
     height:100vh;
+}
+.mapContainer{
+    flex:auto;
 }
 
 .popup{
@@ -127,4 +129,27 @@ body{
 .leaflet-popup-tip-container{
     color: #2D3439;
     background-color: transparent;
+}
+
+.showAllBtn
+{
+    background-color: grey;
+    min-width:70px;
+    height:40px;
+    z-index: 50000;
+    position: absolute;
+    right:50px;
+    padding: 21px;
+    top:30px;
+    border-radius: 5px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.showAllBtn:hover{
+    cursor: pointer;
+    background-color: rgb(182, 182, 182);
 }
