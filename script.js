@@ -80,7 +80,7 @@ class App
         form.addEventListener('keydown',this.onFormSubmit.bind(this));
         formSelect.addEventListener('change',this.toggleElevationField);
         workoutList.addEventListener('click',this.goToWorkout.bind(this));
-        showAllBtn.addEventListener('click',this.showAllWorkouts.bind(this));
+        showAllBtn.addEventListener('mousedown',this.showAllWorkouts.bind(this));
     }
     
     fetchDataFromLocal()
