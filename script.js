@@ -1,7 +1,6 @@
-// navigator.geolocation.getCurrentPosition(()=>{},()=>    {
-//     alert("Geolocation supported but failed to get current location");
-// });
-alert("Look i am an alert");
+navigator.geolocation.getCurrentPosition(()=>{alert("succesfuly got current location");},()=>    {
+    alert("Geolocation supported but failed to get current location");
+});
 
 const mapContainer=document.querySelector('.mapId');
 const list=document.querySelector('.list');
