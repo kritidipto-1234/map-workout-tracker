@@ -1,6 +1,4 @@
-// navigator.geolocation.getCurrentPosition(()=>{alert("succesfuly got current location");},()=>    {
-//     alert("Geolocation supported but failed to get current location");
-// });
+
 
 alert("hey im alert");
 
@@ -14,6 +12,10 @@ const distance=document.querySelector('.distance');
 const duration=document.querySelector('.duration');
 const workoutList=document.querySelector('.workouts_list');
 const showAllBtn=document.querySelector('.showAllBtn');
+
+navigator.geolocation.getCurrentPosition(()=>{showAllBtn.textContent="Succesfull loaction fetch";},()=>    {
+    showAllBtn.textContent="Geolocation error";
+});
 
 class Workout
 {
