@@ -99,14 +99,14 @@ class App
         };
         const tiles=L.tileLayer(tileURl,tileObj);
         this.mymap.addLayer(tiles);//OpenStreet tile service is now being used with leaflet map
+        if (!navigator.geolocation)
+            alert("No geolocation support");
         navigator.geolocation.getCurrentPosition(this.setMapToCurrentLocation.bind(this),this.geolocationFail);
     }
 
     geolocationFail()
     {
         list.style.display="none";
-        if (!navigator.geolocation)
-            alert("No geolocation support");
     }
 
     setMapToCurrentLocation(position)//sets map to given geolocation object
