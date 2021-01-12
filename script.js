@@ -1,7 +1,5 @@
 
 
-alert("hey im a sample alert");
-
 const mapContainer=document.querySelector('.mapId');
 const list=document.querySelector('.list');
 const form=document.querySelector('.form');
@@ -13,9 +11,12 @@ const duration=document.querySelector('.duration');
 const workoutList=document.querySelector('.workouts_list');
 const showAllBtn=document.querySelector('.showAllBtn');
 
-navigator.geolocation.getCurrentPosition(()=>{showAllBtn.textContent="Succesfull loaction fetch";},()=>    {
-    showAllBtn.textContent="Geolocation error";
-});
+// window.onload=function()
+// {
+// navigator.geolocation.getCurrentPosition(()=>{showAllBtn.textContent="Succesfull loaction fetch";},()=>    {
+//     showAllBtn.textContent="Geolocation error";
+// });
+// };
 
 class Workout
 {
@@ -239,4 +240,4 @@ class App
     }
 }
 
-//const newapp=new App();
+const newapp=new App();
