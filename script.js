@@ -9,8 +9,6 @@ const duration=document.querySelector('.duration');
 const workoutList=document.querySelector('.workouts_list');
 const showAllBtn=document.querySelector('.showAllBtn');
 
-list.style.display="none";
-
 class Workout
 {
     id=Date.now();
@@ -101,7 +99,12 @@ class App
         };
         const tiles=L.tileLayer(tileURl,tileObj);
         this.mymap.addLayer(tiles);//OpenStreet tile service is now being used with leaflet map
-        navigator.geolocation.getCurrentPosition(this.setMapToCurrentLocation.bind(this));
+        navigator.geolocation.getCurrentPosition(this.setMapToCurrentLocation.bind(this),geolocationFail);
+    }
+
+    geolocationFail()
+    {
+        list.style.display="none";
     }
 
     setMapToCurrentLocation(position)//sets map to given geolocation object
