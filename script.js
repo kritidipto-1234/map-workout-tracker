@@ -1,6 +1,6 @@
 
 
-alert("hey im alert");
+alert("hey im a sample alert");
 
 const mapContainer=document.querySelector('.mapId');
 const list=document.querySelector('.list');
